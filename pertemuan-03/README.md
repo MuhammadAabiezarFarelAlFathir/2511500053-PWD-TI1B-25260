@@ -11,4 +11,5 @@ Hari ini, Kamis 9 October 2025
   <li>membuat styling untuk selector ID #about elemen h2</li>
   <li>membuat styling untuk slector ID #about elemen p</li>
   <li>membuat styling untuk selector ID #about elemen strong</li>
+  <li>membuat styling untuk selektor ID #about mode responjsif (mobile)</li>
 <ol>
