@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,8 +52,51 @@
                 margin-bottom: 2px;
             }
         }
+
+        #contact form {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        #contact label {
+            display: block;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #contact button {
+            margin-top: 14px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            background: #003366;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #contact button[type="reset"] {
+            background: #ccc;
+            color: #333;
+            margin-left: 8px;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Ini Header</h1>
@@ -87,14 +131,16 @@
             <h2>Kontak Kami</h2>
             <form action="" method="GET">
                 <label for="txtNama">Nama:</label>
-                <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan Nama Anda" required autocomplete="name">
+                <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan Nama Anda" required
+                    autocomplete="name">
 
                 <label for="txtEmail">Email:</label>
-                <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan Email Anda" required autocomplete="email">
+                <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan Email Anda" required
+                    autocomplete="email">
 
                 <label for="txtPesan">Pesan:</label>
                 <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-                
+
                 <button type="submit">Kirim</button>
                 <button type="reset">Batal</button>
             </form>
@@ -104,4 +150,5 @@
         <p>&copy; 2025 Muhammad Aabiezar Farel Al-Fathir [2511500053]</p>
     </footer>
 </body>
+
 </html>
