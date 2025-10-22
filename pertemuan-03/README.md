@@ -26,4 +26,5 @@ Hari ini, 22 october 2025
   <li>section#contact styling warna tombol</li>
   <li>section#contact styling hover tombol</li>
   <li>section#contact styling label dan label>span</li>
+  <li>section#contact styling input, textarea, button</li>
 <ol>
