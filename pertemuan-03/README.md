@@ -13,3 +13,8 @@ Hari ini, Kamis 9 October 2025
   <li>membuat styling untuk selector ID #about elemen strong</li>
   <li>membuat styling untuk selektor ID #about mode responjsif (mobile)</li>
 <ol>
+
+Hari ini, 22 october 2025
+<ol>
+  <li>Section#contact groups selector</li>
+<ol>
