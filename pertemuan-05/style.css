@@ -49,13 +49,6 @@ header li a:active {
     transform: translateY(1px)
 }
 
-footer {
-    background: #222;
-    color: #aaa;
-    text-align: center;
-    padding: 10px;
-}
-
 #home,
 #about,
 #contact {
@@ -80,7 +73,6 @@ footer {
 #home p {
     text-align: justify;
 }
-
 
 #about p,
 #contact label {
@@ -175,7 +167,6 @@ footer {
         padding: 12px 14px;
         border: 1px solid rgba(255, 255, 255, .35);
         background: rgba(255, 255, 255, .8);
-        backdrop-filter: saturate(120%);
     }
 
     #about p,
