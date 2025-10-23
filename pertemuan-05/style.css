@@ -166,7 +166,7 @@ header li a:active {
         display: block;
         padding: 12px 14px;
         border: 1px solid rgba(255, 255, 255, .35);
-        background: rgba(255, 255, 255, .8);
+        background: rgba(255, 255, 255, .08);
     }
 
     #about p,
