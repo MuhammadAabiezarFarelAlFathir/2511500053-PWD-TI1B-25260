@@ -4,4 +4,5 @@ hari ini, 23 oct 2025
   <li>styling header</li>
   <li>styling section#home</li>
   <li>styling navigasi</li>
+  <li>styling header mode mobile</li>
 </ol>
