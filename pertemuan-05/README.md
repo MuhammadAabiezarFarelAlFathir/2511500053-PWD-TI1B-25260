@@ -6,4 +6,5 @@ Hari ini, 23 oct 2025
   <li>“class menu-toggle mobile”</li>
   <li>“styling nav mobile"</li>
   <li>“styling nav menu mobile”</li>
+  <li>“membuat script.js”</li>
 </ol>
