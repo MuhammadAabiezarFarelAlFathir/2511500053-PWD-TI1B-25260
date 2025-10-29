@@ -8,12 +8,12 @@ document.getElementById("menutoggle").addEventListener("click", function () { //
     }
 });
 
-document.getElementById("txtPesan").addEventListener("input", function () {
-    const panjang = this.value.length;
-    document.getElementById("charCount").textContent = panjang + "/200 karakter";
+document.getElementById("txtPesan").addEventListener("input", function () { // Menghitung jumlah karakter pada textarea pesan
+    const panjang = this.value.length; // Menghitung panjang teks dalam textarea
+    document.getElementById("charCount").textContent = panjang + "/200 karakter"; // Menampilkan jumlah karakter di elemen dengan id "charCount"
 });
 
-document.addEventListener("DOMContentLoaded", function () { // 
+document.addEventListener("DOMContentLoaded", function () { 
     const homesection = document.getElementById("home"); // Pastikan ada elemen dengan id "home" di HTML
     const ucapan = document.createElement("p"); // Membuat elemen paragraf baru
     ucapan.textContent = "Selamat datang di halaman saya!"; // Menambahkan teks ucapan
