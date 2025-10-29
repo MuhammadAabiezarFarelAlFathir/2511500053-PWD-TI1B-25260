@@ -8,4 +8,5 @@ Hari ini, 23 oct 2025
   <li>styling nav menu mobile</li>
   <li>membuat script.js</li>
   <li>Script.js Tombol Hamburger, Latihan Ganti Teks Tombol Saat Menu Aktif</li>
+  <li>Script.js, Latihan Ucapan Otomatis Saat Halaman Dimuat</li>
 </ol>
