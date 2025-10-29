@@ -132,7 +132,7 @@ document.querySelector("form").addEventListener("submit", function (e) { // Vali
         isValid = false; // Menandai form sebagai tidak valid
     }
     if (!isValid) { // Jika form tidak valid, cegah submit
-        e.preventDefault();
+        e.preventDefault(); // Mencegah submit form
     } else { // Jika form valid, tampilkan alert terima kasih
         alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim."); // Menampilkan pesan terima kasih
     }
