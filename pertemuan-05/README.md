@@ -9,4 +9,5 @@ Hari ini, 23 oct 2025
   <li>membuat script.js</li>
   <li>Script.js Tombol Hamburger, Latihan Ganti Teks Tombol Saat Menu Aktif</li>
   <li>Script.js, Latihan Ucapan Otomatis Saat Halaman Dimuat</li>
+  <li>Script.js dan indext.html, Latihan Hitung Jumlah Karakter Pesan</li>
 </ol>
