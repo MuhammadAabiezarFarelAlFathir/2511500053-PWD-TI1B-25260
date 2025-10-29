@@ -101,92 +101,92 @@ document.addEventListener("DOMContentLoaded", function () { //
     window.addEventListener('resize', applyResponsiveLayout); // Menerapkan layout responsif saat jendela diubah ukurannya
 });
 
-document.querySelector("form").addEventListener("submit", function (e) {
-    const nama = document.getElementById("txtNama");
-    const email = document.getElementById("txtEmail");
-    const pesan = document.getElementById("txtPesan");
+document.querySelector("form").addEventListener("submit", function (e) { // Validasi form sebelum submit
+    const nama = document.getElementById("txtNama"); // Mengambil elemen input nama
+    const email = document.getElementById("txtEmail"); // Mengambil elemen input email
+    const pesan = document.getElementById("txtPesan"); // Mengambil elemen textarea pesan
 
-    document.querySelectorAll(".error-msg").forEach(el => el.remove());
-    [nama, email, pesan].forEach(el => el.style.border = "");
+    document.querySelectorAll(".error-msg").forEach(el => el.remove()); // Menghapus pesan error yang ada
+    [nama, email, pesan].forEach(el => el.style.border = ""); // Menghapus gaya border merah pada input
 
-    let isValid = true;
+    let isValid = true; // Flag untuk validasi form
 
-    if (nama.value.trim().length < 3) {
-        showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
-        showError(nama, "Nama hanya boleh berisi huruf dan spasi.");
-        isValid = false;
+    if (nama.value.trim().length < 3) { // Validasi nama minimal 3 huruf
+        showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong."); // Menampilkan pesan error
+        isValid = false; // Menandai form sebagai tidak valid
+    } else if (!/^[A-Za-z\s]+$/.test(nama.value)) { // Validasi hanya huruf dan spasi
+        showError(nama, "Nama hanya boleh berisi huruf dan spasi."); // Menampilkan pesan error
+        isValid = false; // Menandai form sebagai tidak valid
     }
     
-    if (email.value.trim() === "") {
-        showError(email, "Email wajib diisi.");
-        isValid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        showError(email, "Format email tidak valid. Contoh: nama@mail.com");
-        isValid = false;
+    if (email.value.trim() === "") { // Validasi email tidak boleh kosong
+        showError(email, "Email wajib diisi."); // Menampilkan pesan error
+        isValid = false; // Menandai form sebagai tidak valid
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { // Validasi format email
+        showError(email, "Format email tidak valid. Contoh: nama@mail.com"); // Menampilkan pesan error
+        isValid = false; // Menandai form sebagai tidak valid
     }
 
-    if (pesan.value.trim().length < 10) {
-        showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
-        isValid = false;
+    if (pesan.value.trim().length < 10) { // Validasi pesan minimal 10 karakter
+        showError(pesan, "Pesan minimal 10 karakter agar lebih jelas."); // Menampilkan pesan error
+        isValid = false; // Menandai form sebagai tidak valid
     }
-    if (!isValid) {
+    if (!isValid) { // Jika form tidak valid, cegah submit
         e.preventDefault();
-    } else {
-        alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim.");
+    } else { // Jika form valid, tampilkan alert terima kasih
+        alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim."); // Menampilkan pesan terima kasih
     }
 });
-function showError(inputElement, message) {
-    const label = inputElement.closest("label");
-    if (!label) return;
+function showError(inputElement, message) { // Fungsi untuk menampilkan pesan error
+    const label = inputElement.closest("label"); // Mencari elemen label terdekat
+    if (!label) return; // memastikan label ada
 
-    label.style.flexWrap = "wrap";
+    label.style.flexWrap = "wrap"; // Mengatur flex-wrap pada label untuk menampung pesan error
 
-    const small = document.createElement("small");
-    small.className = "error-msg";
-    small.textContent = message;
+    const small = document.createElement("small"); // Membuat elemen small untuk pesan error
+    small.className = "error-msg"; // Menetapkan class untuk styling
+    small.textContent = message; // Menetapkan teks pesan error
 
-    small.style.color = "red";
-    small.style.fontSize = "14px";
-    small.style.display = "block";
-    small.style.marginTop = "4px";
-    small.style.flexBasis = "100%";
-    small.dataset.forId = inputElement.id;
+    small.style.color = "red"; // Mengatur warna teks pesan error
+    small.style.fontSize = "14px"; // Mengatur ukuran font pesan error
+    small.style.display = "block"; // Mengatur display block untuk pesan error
+    small.style.marginTop = "4px"; // Mengatur margin atas pesan error
+    small.style.flexBasis = "100%"; // Mengatur flex-basis agar pesan error mengambil seluruh baris
+    small.dataset.forId = inputElement.id; // Menyimpan id input terkait pada dataset untuk referensi
 
-    if (inputElement.nextSibling) {
-        label.insertBefore(small, inputElement.nextSibling);
-    } else {
-        label.appendChild(small);
+    if (inputElement.nextSibling) { // Menyisipkan pesan error setelah elemen input
+        label.insertBefore(small, inputElement.nextSibling); // Sisipkan sebelum "sibling" berikutnya
+    } else { // Jika tidak ada sibling
+        label.appendChild(small); // Tambahkan di akhir label
     }
 
-    inputElement.style.border = "1px solid red";
+    inputElement.style.border = "1px solid red"; // Menambahkan border merah pada input yang error
 
-    alignErrorMessage(small, inputElement);
+    alignErrorMessage(small, inputElement); // Menyelaraskan pesan error dengan input
 }
 
-function alignErrorMessage(smallEl, inputEl) {
-    const isMobile = window.matchMedia("(max-width: 600px)").matches;
-    if (isMobile) {
-        smallEl.style.marginLeft = "0";
-        smallEl.style.width = "100%";
+function alignErrorMessage(smallEl, inputEl) { // Fungsi untuk menyelaraskan pesan error dengan input
+    const isMobile = window.matchMedia("(max-width: 600px)").matches; // Memeriksa apakah tampilan mobile sama
+    if (isMobile) { 
+        smallEl.style.marginLeft = "0"; // Mengatur margin kiri pesan error untuk tampilan mobile
+        smallEl.style.width = "100%"; // Mengatur lebar pesan error untuk tampilan mobile
         return;
     }
 
-    const label = inputEl.closest("label");
-    if (!label) return;
+    const label = inputEl.closest("label"); // Mencari elemen label terdekat
+    if (!label) return; // memastikan label ada
     
-    const rectLabel = label.getBoundingClientRect();
-    const rectInput = inputEl.getBoundingClientRect();
-    const offsetLeft = Math.max(0, Math.round(rectInput.left - rectLabel.left));
+    const rectLabel = label.getBoundingClientRect(); // Mendapatkan posisi dan ukuran label
+    const rectInput = inputEl.getBoundingClientRect(); // Mendapatkan posisi dan ukuran input
+    const offsetLeft = Math.max(0, Math.round(rectInput.left - rectLabel.left)); // Menghitung offset kiri input relatif terhadap label
     
-    smallEl.style.marginLeft = offsetLeft + "px";
-    smallEl.style.width = Math.round(rectInput.width) + "px";
+    smallEl.style.marginLeft = offsetLeft + "px"; // Mengatur margin kiri pesan error sesuai offset input
+    smallEl.style.width = Math.round(rectInput.width) + "px"; // Mengatur lebar pesan error sesuai lebar input
 }
 
-window.addEventListener("resize", () => {
-    document.querySelectorAll(".error-msg").forEach(small => {
-        const target = document.getElementById(small.dataset.forId);
-        if (target) alignErrorMessage(small, target);
+window.addEventListener("resize", () => { // Menyelaraskan ulang pesan error saat jendela diubah ukurannya
+    document.querySelectorAll(".error-msg").forEach(small => { // Memilih semua elemen pesan error
+        const target = document.getElementById(small.dataset.forId); // Mendapatkan elemen input terkait menggunakan dataset
+        if (target) alignErrorMessage(small, target); // Menyelaraskan pesan error dengan input terkait
     });
 });
