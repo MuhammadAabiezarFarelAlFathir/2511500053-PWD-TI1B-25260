@@ -28,8 +28,12 @@
             <p>Ini contoh paragraf HTML.</p>
         </section>
         <section id="about">
+            <?php
+             $NIM = "2511500053";
+             $nim = "2511500053";
+            ?>
             <h2>Tentang Kami</h2>
-            <p><strong>NIM :</strong> 2511500053</p>
+            <p><strong>NIM :</strong> <?php echo $nim ?></p>
             <p><strong>Nama Lengkap :</strong> Muhammad Aabiezar Farel Al-Fathir &#128526;</p>
             <p><strong>Tempat Lahir :</strong> Bandar Lampung</p>
             <p><strong>Tanggal Lahir :</strong> 08/12/2006</p>

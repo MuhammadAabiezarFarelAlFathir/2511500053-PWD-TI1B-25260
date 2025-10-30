@@ -7,7 +7,7 @@ NIM: 2511500053
  <li>echo di hello.php</li>
  <li>Copy index.html, script.js, style.css dari pertemuan 5, ke pertemuan 6</li>
  <li>Copy indext html menjadi index php</li>
- <li></li>
+ <li>php section id about</li>
  <li></li>
  <li></li>
  <li></li>
