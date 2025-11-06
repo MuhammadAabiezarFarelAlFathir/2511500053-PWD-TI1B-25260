@@ -33,15 +33,15 @@
         <section id="about">
             <?php
             $NIM = "2511500053";
-            $NamaL = "Muhammad Aabiezar Farel Al-Fathir &#128526;";
-            $TempatLahir = "Bandar Lampung";
-            $TanggalLahir = "08/12/2006";
-            $Hobby = "Mengutak-atik komponen komputer &#9786;";
-            $Status = "Single, &hearts; Open for casual talks but not to mingle";
-            $Pekerjaan = "Bengkel Duplikat Kunci";
-            $OrangTua = "Bapak Sutriyanto dan Ibu Rosdiana";
-            $Kakak = "Tidak ada";
-            $Adik = "Dzaky dan Shanum";
+            $namaL = "Muhammad Aabiezar Farel Al-Fathir &#128526;";
+            $tempatLahir = "Bandar Lampung";
+            $tanggalLahir = "08/12/2006";
+            $hobby = "Mengutak-atik komponen komputer &#9786;";
+            $status = "Single, &hearts; Open for casual talks but not to mingle";
+            $pekerjaan = "Bengkel Duplikat Kunci";
+            $orangTua = "Bapak Sutriyanto dan Ibu Rosdiana";
+            $kakak = "Tidak ada";
+            $adik = "Dzaky dan Shanum";
             ?>
             <h2>Tentang Kami</h2>
             <p>
@@ -53,55 +53,55 @@
             <p>
                 <strong>Nama Lengkap :</strong>
                 <?php
-                echo $NamaL;
+                echo $namaL;
                 ?>
             </p>
             <p>
                 <strong>Tempat Lahir :</strong>
                 <?php
-                echo $TempatLahir;
+                echo $tempatLahir;
                 ?>
             </p>
             <p>
                 <strong>Tanggal Lahir :</strong>
                 <?php
-                echo $TanggalLahir;
+                echo $tanggalLahir;
                 ?>
             </p>
             <p>
                 <strong>Hobby :</strong>
                 <?php
-                echo $Hobby;
+                echo $hobby;
                 ?>
             </p>
             <p>
                 <strong>Pasangan :</strong>
                 <?php
-                echo $Status;
+                echo $status;
                 ?>
             </p>
             <p>
                 <strong>Pekerjaan :</strong>
                 <?php
-                echo $Pekerjaan;
+                echo $pekerjaan;
                 ?>
             </p>
             <p>
                 <strong>Nama Orang Tua :</strong>
                 <?php
-                echo $OrangTua;
+                echo $orangTua;
                 ?>
             </p>
             <p>
                 <strong>Nama Kakak :</strong>
                 <?php
-                echo $Kakak;
+                echo $kakak;
                 ?>
             </p>
             <p>
                 <strong>Nama Adik :</strong>
                 <?php
-                echo $Adik;
+                echo $adik;
                 ?>
             </p>
         </section>

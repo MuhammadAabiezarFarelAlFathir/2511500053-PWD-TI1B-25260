@@ -10,7 +10,7 @@ NIM: 2511500053
  <li>php section id about</li>
  <li>php echo hallo dunia</li>
  <li>menyelesaikan php section id about</li>
- <li></li>
+ <li>mengubah huruf pada variable php untuk menjadi huruf kecil / full huruf besar</li>
  <li></li>
  <li></li>
  <li></li>
