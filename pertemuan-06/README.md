@@ -9,7 +9,7 @@ NIM: 2511500053
  <li>Copy indext html menjadi index php</li>
  <li>php section id about</li>
  <li>php echo hallo dunia</li>
- <li></li>
+ <li>menyelesaikan php section id about</li>
  <li></li>
  <li></li>
  <li></li>
