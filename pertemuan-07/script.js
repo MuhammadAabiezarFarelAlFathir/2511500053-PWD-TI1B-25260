@@ -135,6 +135,8 @@ document.querySelector("form").addEventListener("submit", function (e) { // Vali
         e.preventDefault(); // Mencegah submit form
     } else { // Jika form valid, tampilkan alert terima kasih
         alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim."); // Menampilkan pesan terima kasih
+        // e.target.reset();
+        e.target.submit(); // Melanjutkan submit form
     }
 });
 function showError(inputElement, message) { // Fungsi untuk menampilkan pesan error

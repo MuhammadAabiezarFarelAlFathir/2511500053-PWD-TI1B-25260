@@ -5,7 +5,7 @@ NIM: 2511500053
 
 <ol>
  <li>copy file dari pertemuan 06 ke 07 (tidak menggunakan pertemuan 7 pertemuan lain karena saya sudah selesai</li>
- <li></li>
+ <li>menambahkan target submit</li>
  <li></li>
  <li></li>
  <li></li>
