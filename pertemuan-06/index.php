@@ -34,8 +34,8 @@
             <?php
             $NIM = "2511500053";
             $namaL = "Muhammad Aabiezar Farel Al-Fathir &#128526;";
-            $tempatLahir = "Bandar Lampung";
-            $tanggalLahir = "08/12/2006";
+            $tempatlahir = "Bandar Lampung";
+            $tanggallahir = "08/12/2006";
             $hobby = "Mengutak-atik komponen komputer &#9786;";
             $status = "Single, &hearts; Open for casual talks but not to mingle";
             $pekerjaan = "Bengkel Duplikat Kunci";
@@ -59,13 +59,13 @@
             <p>
                 <strong>Tempat Lahir :</strong>
                 <?php
-                echo $tempatLahir;
+                echo $tempatlahir;
                 ?>
             </p>
             <p>
                 <strong>Tanggal Lahir :</strong>
                 <?php
-                echo $tanggalLahir;
+                echo $tanggallahir;
                 ?>
             </p>
             <p>
