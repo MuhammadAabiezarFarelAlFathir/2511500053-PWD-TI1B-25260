@@ -16,7 +16,7 @@ NIM: 2511500053
  <li>memindahkan section ipk yang diinginkan</li>
  <li>buat skrip nilai akhir 1-5</li>
  <li>skrip untuk grade 1-5</li>
- <li></li>
+ <li>buat kondisi switch</li>
  <li></li>
  <li></li>
  <li></li>

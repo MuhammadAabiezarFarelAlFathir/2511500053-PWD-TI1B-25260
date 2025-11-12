@@ -174,6 +174,26 @@
             $bobot3 = "";
             $bobot4 = "";
             $bobot5 = "";
+            /*
+            Grade A, A-, B+, B, B-, C+, C, C- maka Status: LULUS
+            Grade D, E maka Status: GAGAL
+            Disini case A sampai C- menggunakan format simple tapi panjang untuk memudahkan pembacaan
+            Disini case D dan E menggunakan format gabungan yang lebih singkat dan padat
+            */
+            switch ($grade1):
+                case "A": $status1 = "LULUS"; break;
+                case "A-": $status1 = "LULUS"; break;
+                case "B+": $status1 = "LULUS"; break;
+                case "B": $status1 = "LULUS"; break;
+                case "B-": $status1 = "LULUS"; break;
+                case "C+": $status1 = "LULUS"; break;
+                case "C": $status1 = "LULUS"; break;
+                case "C-": $status1 = "LULUS"; break;
+                case "D":
+                case "E":
+                    $status1 = "GAGAL";
+                    break;
+            endswitch;
             $status1 = "";
             $status2 = "";
             $status3 = "";
