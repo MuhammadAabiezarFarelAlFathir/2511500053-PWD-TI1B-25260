@@ -19,7 +19,7 @@ NIM: 2511500053
  <li>buat kondisi switch</li>
  <li>menyelesaikan konsisi switch grade</li>
  <li>hitung ipk</li>
- <li></li>
+ <li>menyelesaikan rumush mutu 1-5 dan menambahkan jika untuk grade 1-5</li>
  <li></li>
  <li></li>
 </ol>

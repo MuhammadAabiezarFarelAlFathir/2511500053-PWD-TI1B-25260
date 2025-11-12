@@ -143,12 +143,161 @@
             $nilaiAkhir3 = "(0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3)";
             $nilaiAkhir4 = "(0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4)";
             $nilaiAkhir5 = "(0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5)";
-            #Nilai kehadiran < 70, otomatis Grade = E.
-            $grade1 = "if ";
-            $grade2 = "";
-            $grade3 = "";
-            $grade4 = "";
-            $grade5 = "";
+            if ($nilaiAkhir1 >= 91) && ($nilaiAkhir1 <= 100):
+                $grade1 = "A";
+                $mutu1 = 4;
+            elseif ($nilaiAkhir1 >= 81) && ($nilaiAkhir1 <= 90):
+                $grade1 = "A-";
+                $mutu1 = 3.7;
+            elseif ($nilaiAkhir1 >= 76) && ($nilaiAkhir1 <= 80):
+                $grade1 = "B+";
+                $mutu1 = 3.3;
+            elseif ($nilaiAkhir1 >= 71) && ($nilaiAkhir1 <= 75):
+                $grade1 = "B";
+                $mutu1 = 3.0;
+            elseif ($nilaiAkhir1 >= 66) && ($nilaiAkhir1 <= 70):
+                $grade1 = "B-";
+                $mutu1 = 2.7;
+            elseif ($nilaiAkhir1 >= 61) && ($nilaiAkhir1 <= 65):
+                $grade1 = "C+";
+                $mutu1 = 2.3;
+            elseif ($nilaiAkhir1 >= 56) && ($nilaiAkhir1 <= 60):
+                $grade1 = "C";
+                $mutu1 = 2.0;
+            elseif ($nilaiAkhir1 >= 51) && ($nilaiAkhir1 <= 55):
+                $grade1 = "C-";
+                $mutu1 = 1.7;
+            elseif ($nilaiAkhir1 >= 36) && ($nilaiAkhir1 <= 50):
+                $grade1 = "D";
+                $mutu1 = 1.0;
+            elseif ($nilaiAkhir1 >= 0) && ($nilaiAkhir1 <= 35):
+                $grade1 = "E";
+                $mutu1 = 0;
+            endif;
+            if ($nilaiAkhir2 >= 91) && ($nilaiAkhir2 <= 100):
+                $grade2 = "A";
+                $mutu2 = 4;
+            elseif ($nilaiAkhir2 >= 81) && ($nilaiAkhir2 <= 90):
+                $grade2 = "A-";
+                $mutu2 = 3.7;
+            elseif ($nilaiAkhir2 >= 76) && ($nilaiAkhir2 <= 80):
+                $grade2 = "B+";
+                $mutu2 = 3.3;
+            elseif ($nilaiAkhir2 >= 71) && ($nilaiAkhir2 <= 75):
+                $grade2 = "B";
+                $mutu2 = 3.0;
+            elseif ($nilaiAkhir2 >= 66) && ($nilaiAkhir2 <= 70):
+                $grade2 = "B-";
+                $mutu2 = 2.7;
+            elseif ($nilaiAkhir2 >= 61) && ($nilaiAkhir2 <= 65):
+                $grade2 = "C+";
+                $mutu2 = 2.3;
+            elseif ($nilaiAkhir2 >= 56) && ($nilaiAkhir2 <= 60):
+                $grade2 = "C";
+                $mutu2 = 2.0;
+            elseif ($nilaiAkhir2 >= 51) && ($nilaiAkhir2 <= 55):
+                $grade2 = "C-";
+                $mutu2 = 1.7;
+            elseif ($nilaiAkhir2 >= 36) && ($nilaiAkhir2 <= 50):
+                $grade2 = "D";
+                $mutu2 = 1.0;
+            elseif ($nilaiAkhir2 >= 0) && ($nilaiAkhir2 <= 35):
+                $grade2 = "E";
+                $mutu2 = 0;
+            endif;
+            if ($nilaiAkhir3 >= 91) && ($nilaiAkhir3 <= 100):
+                $grade3 = "A";
+                $mutu3 = 4;
+            elseif ($nilaiAkhir3 >= 81) && ($nilaiAkhir3 <= 90):
+                $grade3 = "A-";
+                $mutu3 = 3.7;
+            elseif ($nilaiAkhir3 >= 76) && ($nilaiAkhir3 <= 80):
+                $grade3 = "B+";
+                $mutu3 = 3.3;
+            elseif ($nilaiAkhir3 >= 71) && ($nilaiAkhir3 <= 75):
+                $grade3 = "B";
+                $mutu3 = 3.0;
+            elseif ($nilaiAkhir3 >= 66) && ($nilaiAkhir3 <= 70):
+                $grade3 = "B-";
+                $mutu3 = 2.7;
+            elseif ($nilaiAkhir3 >= 61) && ($nilaiAkhir3 <= 65):
+                $grade3 = "C+";
+                $mutu3 = 2.3;
+            elseif ($nilaiAkhir3 >= 56) && ($nilaiAkhir3 <= 60):
+                $grade3 = "C";
+                $mutu3 = 2.0;
+            elseif ($nilaiAkhir3 >= 51) && ($nilaiAkhir3 <= 55):
+                $grade3 = "C-";
+                $mutu3 = 1.7;
+            elseif ($nilaiAkhir3 >= 36) && ($nilaiAkhir3 <= 50):
+                $grade3 = "D";
+                $mutu3 = 1.0;
+            elseif ($nilaiAkhir3 >= 0) && ($nilaiAkhir3 <= 35):
+                $grade3 = "E"; 
+                $mutu3 = 0;
+            endif;
+            if ($nilaiAkhir4 >= 91) && ($nilaiAkhir4 <= 100):
+                $grade4 = "A";
+                $mutu4 = 4;
+            elseif ($nilaiAkhir4 >= 81) && ($nilaiAkhir4 <= 90):
+                $grade4 = "A-";
+                $mutu4 = 3.7;
+            elseif ($nilaiAkhir4 >= 76) && ($nilaiAkhir4 <= 80):
+                $grade4 = "B+";
+                $mutu4 = 3.3;
+            elseif ($nilaiAkhir4 >= 71) && ($nilaiAkhir4 <= 75):
+                $grade4 = "B";
+                $mutu4 = 3.0;
+            elseif ($nilaiAkhir4 >= 66) && ($nilaiAkhir4 <= 70):
+                $grade4 = "B-";
+                $mutu4 = 2.7;
+            elseif ($nilaiAkhir4 >= 61) && ($nilaiAkhir4 <= 65):
+                $grade4 = "C+";
+                $mutu4 = 2.3;
+            elseif ($nilaiAkhir4 >= 56) && ($nilaiAkhir4 <= 60):
+                $grade4 = "C";
+                $mutu4 = 2.0;
+            elseif ($nilaiAkhir4 >= 51) && ($nilaiAkhir4 <= 55):
+                $grade4 = "C-";
+                $mutu4 = 1.7;
+            elseif ($nilaiAkhir4 >= 36) && ($nilaiAkhir4 <= 50):
+                $grade4 = "D";
+                $mutu4 = 1.0;
+            elseif ($nilaiAkhir4 >= 0) && ($nilaiAkhir4 <= 35):
+                $grade4 = "E";
+                $mutu4 = 0;
+            endif;
+            if ($nilaiAkhir5 >= 91) && ($nilaiAkhir5 <= 100):
+                $grade5 = "A";
+                $mutu5 = 4;
+            elseif ($nilaiAkhir5 >= 81) && ($nilaiAkhir5 <= 90):
+                $grade5 = "A-";
+                $mutu5 = 3.7;
+            elseif ($nilaiAkhir5 >= 76) && ($nilaiAkhir5 <= 80):
+                $grade5 = "B+";
+                $mutu5 = 3.3;
+            elseif ($nilaiAkhir5 >= 71) && ($nilaiAkhir5 <= 75):
+                $grade5 = "B";
+                $mutu5 = 3.0;
+            elseif ($nilaiAkhir5 >= 66) && ($nilaiAkhir5 <= 70):
+                $grade5 = "B-";
+                $mutu5 = 2.7;
+            elseif ($nilaiAkhir5 >= 61) && ($nilaiAkhir5 <= 65):
+                $grade5 = "C+";
+                $mutu5 = 2.3;
+            elseif ($nilaiAkhir5 >= 56) && ($nilaiAkhir5 <= 60):
+                $grade5 = "C";
+                $mutu5 = 2.0;
+            elseif ($nilaiAkhir5 >= 51) && ($nilaiAkhir5 <= 55):
+                $grade5 = "C-";
+                $mutu5 = 1.7;
+            elseif ($nilaiAkhir5 >= 36) && ($nilaiAkhir5 <= 50):
+                $grade5 = "D";
+                $mutu5 = 1.0;
+            elseif ($nilaiAkhir5 >= 0) && ($nilaiAkhir5 <= 35):
+                $grade5 = "E";
+                $mutu5 = 0;
+            endif;
             if ($nilaikehadiran1 < 70):
                 $grade1 = "E";
             endif;
@@ -164,11 +313,6 @@
             if ($nilaikehadiran5 < 70):
                 $grade5 = "E";
             endif;
-            $mutu1 = "";
-            $mutu2 = "";
-            $mutu3 = "";
-            $mutu4 = "";
-            $mutu5 = "";
             #Bobot = angkaMutu * sksMatkul
             $bobot1 = $mutu1 * $sksMatkul1;
             $bobot2 = $mutu2 * $sksMatkul2;
@@ -268,7 +412,7 @@
             $totalBobot = $bobot1 + $bobot2 + $bobot3 + $bobot4 + $bobot5;
             $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul3 + $sksMatkul4 + $sksMatkul5;
             #IPK = totalBobot / totalSKS
-            $IPK = "";
+            $IPK = $totalBobot / $totalSKS;
             ?>
             <h2>Tentang Kami</h2>
             <p>
