@@ -15,7 +15,7 @@ NIM: 2511500053
  <li>5x5 </li>
  <li>memindahkan section ipk yang diinginkan</li>
  <li>buat skrip nilai akhir 1-5</li>
- <li></li>
+ <li>skrip untuk grade 1-5</li>
  <li></li>
  <li></li>
  <li></li>

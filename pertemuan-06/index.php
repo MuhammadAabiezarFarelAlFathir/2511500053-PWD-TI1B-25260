@@ -143,11 +143,27 @@
             $nilaiAkhir3 = "(0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3)";
             $nilaiAkhir4 = "(0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4)";
             $nilaiAkhir5 = "(0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5)";
-            $grade1 = "";
+            #Nilai kehadiran < 70, otomatis Grade = E.
+            $grade1 = "if ";
             $grade2 = "";
             $grade3 = "";
             $grade4 = "";
             $grade5 = "";
+            if ($nilaikehadiran1 < 70):
+                $grade1 = "E";
+            endif;
+            if ($nilaikehadiran2 < 70):
+                $grade2 = "E";
+            endif;
+            if ($nilaikehadiran3 < 70):
+                $grade3 = "E";
+            endif;
+            if ($nilaikehadiran4 < 70):
+                $grade4 = "E";
+            endif;
+            if ($nilaikehadiran5 < 70):
+                $grade5 = "E";
+            endif;
             $mutu1 = "";
             $mutu2 = "";
             $mutu3 = "";
