@@ -14,7 +14,7 @@ NIM: 2511500053
  <li>test</li>
  <li>5x5 </li>
  <li>memindahkan section ipk yang diinginkan</li>
- <li></li>
+ <li>buat skrip nilai akhir 1-5</li>
  <li></li>
  <li></li>
  <li></li>

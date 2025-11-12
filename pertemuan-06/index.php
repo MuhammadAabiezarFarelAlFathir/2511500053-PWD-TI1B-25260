@@ -137,6 +137,35 @@
             $nilaiUAS3 = "";
             $nilaiUAS4 = "";
             $nilaiUAS5 = "";
+            #Nilai Akhir = (0.1 * nilaiHadir) + (0.2 * nilaiTugas) + (0.3 * nilaiUTS) + (0.4 * nilaiUAS)
+            $nilaiAkhir1 = "(0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1)";
+            $nilaiAkhir2 = "(0.1 * $nilaiHadir2) + (0.2 * $nilaiTugas2) + (0.3 * $nilaiUTS2) + (0.4 * $nilaiUAS2)";
+            $nilaiAkhir3 = "(0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3)";
+            $nilaiAkhir4 = "(0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4)";
+            $nilaiAkhir5 = "(0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5)";
+            $grade1 = "";
+            $grade2 = "";
+            $grade3 = "";
+            $grade4 = "";
+            $grade5 = "";
+            $mutu1 = "";
+            $mutu2 = "";
+            $mutu3 = "";
+            $mutu4 = "";
+            $mutu5 = "";
+            $bobot1 = "";
+            $bobot2 = "";
+            $bobot3 = "";
+            $bobot4 = "";
+            $bobot5 = "";
+            $status1 = "";
+            $status2 = "";
+            $status3 = "";
+            $status4 = "";
+            $status5 = "";
+            $totalBobot = "";
+            $totalSKS = "";
+            $IPK = "";
             ?>
             <h2>Tentang Kami</h2>
             <p>
