@@ -18,7 +18,7 @@ NIM: 2511500053
  <li>skrip untuk grade 1-5</li>
  <li>buat kondisi switch</li>
  <li>menyelesaikan konsisi switch grade</li>
- <li></li>
+ <li>hitung ipk</li>
  <li></li>
  <li></li>
  <li></li>

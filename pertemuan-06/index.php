@@ -170,11 +170,11 @@
             $mutu4 = "";
             $mutu5 = "";
             #Bobot = angkaMutu * sksMatkul
-            $bobot1 = "";
-            $bobot2 = "";
-            $bobot3 = "";
-            $bobot4 = "";
-            $bobot5 = "";
+            $bobot1 = $mutu1 * $sksMatkul1;
+            $bobot2 = $mutu2 * $sksMatkul2;
+            $bobot3 = $mutu3 * $sksMatkul3;
+            $bobot4 = $mutu4 * $sksMatkul4;
+            $bobot5 = $mutu5 * $sksMatkul5;
             /*
             Grade A, A-, B+, B, B-, C+, C, C- maka Status: LULUS
             Grade D, E maka Status: GAGAL
@@ -265,8 +265,9 @@
                     $status5 = "GAGAL";
                     break;
             endswitch;
-            $totalBobot = "";
-            $totalSKS = "";
+            $totalBobot = $bobot1 + $bobot2 + $bobot3 + $bobot4 + $bobot5;
+            $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul3 + $sksMatkul4 + $sksMatkul5;
+            #IPK = totalBobot / totalSKS
             $IPK = "";
             ?>
             <h2>Tentang Kami</h2>
