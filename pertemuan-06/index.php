@@ -169,6 +169,7 @@
             $mutu3 = "";
             $mutu4 = "";
             $mutu5 = "";
+            #Bobot = angkaMutu * sksMatkul
             $bobot1 = "";
             $bobot2 = "";
             $bobot3 = "";
@@ -194,11 +195,76 @@
                     $status1 = "GAGAL";
                     break;
             endswitch;
-            $status1 = "";
-            $status2 = "";
-            $status3 = "";
-            $status4 = "";
-            $status5 = "";
+            switch ($grade2):
+                case "A": $status2 = "LULUS"; break;
+                case "A-": $status2 = "LULUS"; break;
+                case "B+": $status2 = "LULUS"; break;
+                case "B": $status2 = "LULUS"; break;
+                case "B-": $status2 = "LULUS"; break;
+                case "C+": $status2 = "LULUS"; break;
+                case "C": $status2 = "LULUS"; break;
+                case "C-": $status2 = "LULUS"; break;
+                case "D":
+                case "E":
+                    $status2 = "GAGAL";
+                    break;
+            endswitch;
+            switch ($grade2):
+                case "A": $status2 = "LULUS"; break;
+                case "A-": $status2 = "LULUS"; break;
+                case "B+": $status2 = "LULUS"; break;
+                case "B": $status2 = "LULUS"; break;
+                case "B-": $status2 = "LULUS"; break;
+                case "C+": $status2 = "LULUS"; break;
+                case "C": $status2 = "LULUS"; break;
+                case "C-": $status2 = "LULUS"; break;
+                case "D":
+                case "E":
+                    $status2 = "GAGAL";
+                    break;
+            endswitch;
+            switch ($grade3):
+                case "A": $status3 = "LULUS"; break;
+                case "A-": $status3 = "LULUS"; break;
+                case "B+": $status3 = "LULUS"; break;
+                case "B": $status3 = "LULUS"; break;
+                case "B-": $status3 = "LULUS"; break;
+                case "C+": $status3 = "LULUS"; break;
+                case "C": $status3 = "LULUS"; break;
+                case "C-": $status3 = "LULUS"; break;
+                case "D":
+                case "E":
+                    $status3 = "GAGAL";
+                    break;
+            endswitch;
+            switch ($grade4):
+                case "A": $status4 = "LULUS"; break;
+                case "A-": $status4 = "LULUS"; break;
+                case "B+": $status4 = "LULUS"; break;
+                case "B": $status4 = "LULUS"; break;
+                case "B-": $status4 = "LULUS"; break;
+                case "C+": $status4 = "LULUS"; break;
+                case "C": $status4 = "LULUS"; break;
+                case "C-": $status4 = "LULUS"; break;
+                case "D":
+                case "E":
+                    $status4 = "GAGAL";
+                    break;
+            endswitch;
+            switch ($grade5):
+                case "A": $status5 = "LULUS"; break;
+                case "A-": $status5 = "LULUS"; break;
+                case "B+": $status5 = "LULUS"; break;
+                case "B": $status5 = "LULUS"; break;
+                case "B-": $status5 = "LULUS"; break;
+                case "C+": $status5 = "LULUS"; break;
+                case "C": $status5 = "LULUS"; break;
+                case "C-": $status5 = "LULUS"; break;
+                case "D":
+                case "E":
+                    $status5 = "GAGAL";
+                    break;
+            endswitch;
             $totalBobot = "";
             $totalSKS = "";
             $IPK = "";

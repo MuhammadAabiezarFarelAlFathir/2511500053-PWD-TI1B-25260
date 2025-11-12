@@ -17,7 +17,7 @@ NIM: 2511500053
  <li>buat skrip nilai akhir 1-5</li>
  <li>skrip untuk grade 1-5</li>
  <li>buat kondisi switch</li>
- <li></li>
+ <li>menyelesaikan konsisi switch grade</li>
  <li></li>
  <li></li>
  <li></li>
