@@ -21,5 +21,5 @@ NIM: 2511500053
  <li>hitung ipk</li>
  <li>menyelesaikan rumush mutu 1-5 dan menambahkan jika untuk grade 1-5</li>
  <li>styling css untuk ipk</li>
- <li></li>
+ <li>menyelesaikan section ipk</li>
 </ol>
