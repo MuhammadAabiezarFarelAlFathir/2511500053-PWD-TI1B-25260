@@ -8,7 +8,7 @@ NIM: 2511500053
  <li>menambahkan target submit</li>
  <li>copy dan rename index php menjadi getphp dan menambahkan get_proses.php untuk action</li>
  <li>isi get proses php</li>
- <li></li>
+ <li>session start di get proses php</li>
  <li></li>
  <li></li>
  <li></li>
