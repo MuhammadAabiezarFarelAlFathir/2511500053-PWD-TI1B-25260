@@ -87,6 +87,7 @@ header li a:active {
 }
 
 #about p,
+#entry label,
 #contact label {
   display: flex;
   justify-content: flex-start;
@@ -97,6 +98,7 @@ header li a:active {
 }
 
 #about strong,
+#entry label>span,
 #contact label>span {
   min-width: 180px;
   color: #003366;
@@ -106,6 +108,8 @@ header li a:active {
   flex-shrink: 0;
 }
 
+#entry input,
+#entry textarea,
 #contact input,
 #contact textarea {
   flex: 1;
@@ -116,6 +120,18 @@ header li a:active {
   font-weight: normal;
   margin: 0;
   box-sizing: border-box;
+}
+
+#entry button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  margin-right: 8px;
 }
 
 #contact button {
@@ -130,24 +146,28 @@ header li a:active {
   margin-right: 8px;
 }
 
+#entry button[type="submit"],
 #contact button[type="submit"] {
   background-color: #003366;
   color: #fff;
   font-weight: 600;
 }
 
+#entry button[type="reset"],
 #contact button[type="reset"] {
   background-color: #b4b4b4;
   color: #272727;
   font-weight: 500;
 }
 
+#entry button[type="submit"]:hover,
 #contact button[type="submit"]:hover {
   background-color: #0379ee;
   transform: translateY(-1px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+#entry button[type="reset"]:hover,
 #contact button[type="reset"]:hover {
   background-color: #cccccc;
   transform: translateY(-1px);
@@ -218,18 +238,23 @@ footer {
   }
 
   #about p,
+  #entry label,
   #contact label {
     flex-direction: column;
     align-items: flex-start;
   }
 
   #about strong,
+  #entry label>span,
   #contact label>span {
     text-align: left;
     padding-right: 0;
     margin-bottom: 2px;
   }
 
+  #entry input,
+  #entry textarea,
+  #entry button,
   #contact input,
   #contact textarea,
   #contact button {

@@ -7,8 +7,8 @@
 <ol>
   <li>mengedit section About</li>
   <li>nambah section id entry</li>
-  <li></li>
-  <li></li>
+  <li>Membuat label label untuk section id entry</li>
+  <li>Menyamakan styling Section id entry dengan section id contact</li>
   <li></li>
   <li></li>
   <li></li>
