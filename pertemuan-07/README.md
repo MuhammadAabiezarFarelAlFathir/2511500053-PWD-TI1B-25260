@@ -10,6 +10,6 @@ NIM: 2511500053
  <li>isi get proses php</li>
  <li>session start di get proses php</li>
  <li>copy get.php dan get_proses.php menjadi post.php dan post_proses.php</li>
- <li></li>
+ <li>sesuaikan get ke post</li>
  <li></li>
 </ol>
