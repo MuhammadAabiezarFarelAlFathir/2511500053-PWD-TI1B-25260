@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', applyResponsiveLayout);
 });
 
-document.querySelector("form").addEventListener("submit", function (e) {
+document.querySelector("form[action='proses.php']").addEventListener("submit", function (e) {
     const nama = document.getElementById("txtNama");
     const email = document.getElementById("txtEmail");
     const pesan = document.getElementById("txtPesan");

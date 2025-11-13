@@ -15,6 +15,56 @@ $sespesan = "";
 if (isset($_SESSION["sespesan"])):
   $sespesan = $_SESSION["sespesan"];
 endif;
+
+$sesnim = "";
+if (isset($_SESSION["nim"])):
+  $sesnim = $_SESSION["nim"];
+endif;
+
+$sesnamalengkap = "";
+if (isset($_SESSION["namaLengkap"])):
+  $sesnamalengkap = $_SESSION["namaLengkap"];
+endif;
+
+$sestempatlahir = "";
+if (isset($_SESSION["tempatLahir"])):
+  $sestempatlahir = $_SESSION["tempatLahir"];
+endif;
+
+$sestanggallahir = "";
+if (isset($_SESSION["tanggalLahir"])):
+  $sestanggallahir = $_SESSION["tanggalLahir"];
+endif;
+
+$seshobi = "";
+if (isset($_SESSION["hobi"])):
+  $seshobi = $_SESSION["hobi"];
+endif;
+
+$sespasangan = "";
+if (isset($_SESSION["pasangan"])):
+  $sespasangan = $_SESSION["pasangan"];
+endif;
+
+$sespekerjaan = "";
+if (isset($_SESSION["pekerjaan"])):
+  $sespekerjaan = $_SESSION["pekerjaan"];
+endif;
+
+$sesnamaortu = "";
+if (isset($_SESSION["namaOrtu"])):
+  $sesnamaortu = $_SESSION["namaOrtu"];
+endif;
+
+$sesnamakakak = "";
+if (isset($_SESSION["namaKakak"])):
+  $sesnamakakak = $_SESSION["namaKakak"];
+endif;
+$sesnamaadik = "";
+if (isset($_SESSION["namaAdik"])):
+  $sesnamaadik = $_SESSION["namaAdik"];
+endif;
+
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +86,7 @@ endif;
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
+        <li><a href="#entry">Entry Data</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
@@ -100,79 +151,17 @@ endif;
     </section>
 
     <section id="about">
-            <?php
-            $NIM = "2511500053";
-            $namaL = "Muhammad Aabiezar Farel Al-Fathir &#128526;";
-            $tempatlahir = "Bandar Lampung";
-            $tanggallahir = "08/12/2006";
-            $hobby = "Mengutak-atik komponen komputer &#9786;";
-            $status = "Single, &hearts; Open for casual talks but not to mingle";
-            $pekerjaan = "Bengkel Duplikat Kunci";
-            $orangTua = "Bapak Sutriyanto dan Ibu Rosdiana";
-            $kakak = "Tidak ada";
-            $adik = "Dzaky dan Shanum";
-            ?>
-            <h2>Tentang Kami</h2>
-            <p>
-                <strong>NIM :</strong>
-                <?php
-                echo $NIM;
-                ?>
-            </p>
-            <p>
-                <strong>Nama Lengkap :</strong>
-                <?php
-                echo $namaL;
-                ?>
-            </p>
-            <p>
-                <strong>Tempat Lahir :</strong>
-                <?php
-                echo $tempatlahir;
-                ?>
-            </p>
-            <p>
-                <strong>Tanggal Lahir :</strong>
-                <?php
-                echo $tanggallahir;
-                ?>
-            </p>
-            <p>
-                <strong>Hobby :</strong>
-                <?php
-                echo $hobby;
-                ?>
-            </p>
-            <p>
-                <strong>Pasangan :</strong>
-                <?php
-                echo $status;
-                ?>
-            </p>
-            <p>
-                <strong>Pekerjaan :</strong>
-                <?php
-                echo $pekerjaan;
-                ?>
-            </p>
-            <p>
-                <strong>Nama Orang Tua :</strong>
-                <?php
-                echo $orangTua;
-                ?>
-            </p>
-            <p>
-                <strong>Nama Kakak :</strong>
-                <?php
-                echo $kakak;
-                ?>
-            </p>
-            <p>
-                <strong>Nama Adik :</strong>
-                <?php
-                echo $adik;
-                ?>
-            </p>
+      <h2>Tentang Kami</h2>
+      <p><strong>NIM :</strong> <?php echo htmlspecialchars($sesnim); ?></p>
+      <p><strong>Nama Lengkap :</strong> <?php echo htmlspecialchars($sesnamalengkap); ?></p>
+      <p><strong>Tempat Lahir :</strong> <?php echo htmlspecialchars($sestempatlahir); ?></p>
+      <p><strong>Tanggal Lahir :</strong> <?php echo htmlspecialchars($sestanggallahir); ?></p>
+      <p><strong>Hobi :</strong> <?php echo htmlspecialchars($seshobi); ?></p>
+      <p><strong>Pasangan :</strong> <?php echo htmlspecialchars($sespasangan); ?></p>
+      <p><strong>Pekerjaan :</strong> <?php echo htmlspecialchars($sespekerjaan); ?></p>
+      <p><strong>Nama Orang Tua :</strong> <?php echo htmlspecialchars($sesnamaortu); ?></p>
+      <p><strong>Nama Kakak :</strong> <?php echo htmlspecialchars($sesnamakakak); ?></p>
+      <p><strong>Nama Adik :</strong> <?php echo htmlspecialchars($sesnamaadik); ?></p>
     </section>
 
     <section id="contact">
