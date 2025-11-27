@@ -16,7 +16,7 @@
   <li>function tampilkanBiodata</li>
   <li>tampilkanbiodata di section id about</li>
   <li>funsi require di index php</li>
-  <li></li>
+  <li>perbaikan required to require</li>
   <li></li>
   <li></li>
   <li></li>
