@@ -14,7 +14,7 @@
   <li>simpan file fungsi.php</li>
   <li>Fungsi formatTanggal()</li>
   <li>function tampilkanBiodata</li>
-  <li></li>
+  <li>tampilkanbiodata di section id about</li>
   <li></li>
   <li></li>
   <li></li>
