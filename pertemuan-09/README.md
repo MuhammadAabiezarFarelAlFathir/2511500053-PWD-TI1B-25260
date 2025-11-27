@@ -12,7 +12,7 @@
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
   <li>simpan file fungsi.php</li>
-  <li></li>
+  <li>Fungsi formatTanggal()</li>
   <li></li>
   <li></li>
   <li></li>
