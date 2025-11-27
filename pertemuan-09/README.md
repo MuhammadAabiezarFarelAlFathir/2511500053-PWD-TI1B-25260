@@ -15,7 +15,7 @@
   <li>Fungsi formatTanggal()</li>
   <li>function tampilkanBiodata</li>
   <li>tampilkanbiodata di section id about</li>
-  <li></li>
+  <li>funsi require di index php</li>
   <li></li>
   <li></li>
   <li></li>
