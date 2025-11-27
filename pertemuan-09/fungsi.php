@@ -24,4 +24,15 @@ $html .= "<p><strong>{$label}</strong> {$nilai}{$suffix}</p>";
 }
 return $html;
 }
+
+function tampilkanKontak($conf, $arr)
+{
+$html = "";
+foreach ($conf as $k => $v) {
+$label = $v["label"];
+$nilai = bersihkan($arr[$k] ?? '');
+$html .= "<p><strong>{$label}</strong> {$nilai}</p>";
+}
+return $html;
+}
 ?>
