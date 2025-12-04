@@ -8,7 +8,7 @@
   <li>perbaikan di koneksi.php</li>
   <li>menambahkan data di tabel</li>
   <li>membuat read_inc.php</li>
-  <li></li>
+  <li>ganti kode di index.php agar mengambil data dari mysql</li>
   <li></li>
   <li></li>
   <li></li>
