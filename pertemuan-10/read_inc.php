@@ -5,7 +5,7 @@ $fieldcontact = [
   "nama" => ["label" => "Nama:", "suffix" => ""],
   "email" => ["label" => "Email:", "suffix" => ""],
   "pesan" => ["label" => "Pesan Anda:", "suffix" => ""],
-]
+];
 
 $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
 $q = mysqli_query($conn, $sql);

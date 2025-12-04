@@ -9,7 +9,7 @@
   <li>menambahkan data di tabel</li>
   <li>membuat read_inc.php</li>
   <li>ganti kode di index.php agar mengambil data dari mysql</li>
-  <li></li>
+  <li>perbaikan kode di read_inc.php</li>
   <li></li>
   <li></li>
   <li></li>
