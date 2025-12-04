@@ -7,7 +7,7 @@
   <li>membuat read.php</li>
   <li>perbaikan di koneksi.php</li>
   <li>menambahkan data di tabel</li>
-  <li></li>
+  <li>membuat read_inc.php</li>
   <li></li>
   <li></li>
   <li></li>
