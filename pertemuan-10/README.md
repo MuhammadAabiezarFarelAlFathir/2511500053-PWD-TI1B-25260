@@ -14,7 +14,7 @@
   <li>menghapus kode di index.php</li>
   <li>update fungsi.php</li>
   <li>update index.php</li>
-  <li></li>
+  <li>rewrite proses.php</li>
   <li></li>
   <li></li>
 </ol>
