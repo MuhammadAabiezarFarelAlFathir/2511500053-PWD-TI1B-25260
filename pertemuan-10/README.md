@@ -12,8 +12,8 @@
   <li>perbaikan kode di read_inc.php</li>
   <li>perbaikan di read_inc.php</li>
   <li>menghapus kode di index.php</li>
-  <li></li>
-  <li></li>
+  <li>update fungsi.php</li>
+  <li>update index.php</li>
   <li></li>
   <li></li>
   <li></li>
