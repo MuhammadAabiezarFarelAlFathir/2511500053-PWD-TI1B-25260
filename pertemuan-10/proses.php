@@ -1,23 +1,44 @@
 <?php
 session_start();
-
-
-
+require_once __DIR__ . '/koneksi.php';
+require_once __DIR__ . '/fungsi.php';
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
   $_SESSION['flash_error'] = 'Akses tidak valid.';
   redirect_ke('index.php#contact');
 }
 
-$nama = bersihkan($_POST['txtNama'] ?? "");
-$email = bersihkan($_POST['txtEmail'] ?? "");
-$pesan = bersihkan($_POST['txtPesan'] ?? "");
+if (isset($_POST['txtNim'])) {
+  // Process biodata form
+  $arrBiodata = [
+    "nim" => bersihkan($_POST["txtNim"] ?? ""),
+    "nama" => bersihkan($_POST["txtNmLengkap"] ?? ""),
+    "tempat" => bersihkan($_POST["txtT4Lhr"] ?? ""),
+    "tanggal" => bersihkan($_POST["txtTglLhr"] ?? ""),
+    "hobi" => bersihkan($_POST["txtHobi"] ?? ""),
+    "pasangan" => bersihkan($_POST["txtPasangan"] ?? ""),
+    "pekerjaan" => bersihkan($_POST["txtKerja"] ?? ""),
+    "ortu" => bersihkan($_POST["txtNmOrtu"] ?? ""),
+    "kakak" => bersihkan($_POST["txtNmKakak"] ?? ""),
+    "adik" => bersihkan($_POST["txtNmAdik"] ?? "")
+  ];
+  $_SESSION["biodata"] = $arrBiodata;
+  redirect_ke('index.php#about');
+}
+
+// Process contact form
+$nama = bersihkan($_POST['txtNama'] ?? '');
+$email = bersihkan($_POST['txtEmail'] ?? '');
+$pesan = bersihkan($_POST['txtPesan'] ?? '');
+$captcha = $_POST['captcha'] ?? '';
 
 
 $errors = [];
 
 if ($nama === '') {
   $errors[] = 'Nama wajib diisi.';
+} elseif (strlen($nama) < 3) {
+  $errors[] = 'Nama minimal 3 karakter.';
 }
 
 if ($email === '') {
@@ -28,6 +49,12 @@ if ($email === '') {
 
 if ($pesan === '') {
   $errors[] = 'Pesan wajib diisi.';
+} elseif (strlen($pesan) < 10) {
+  $errors[] = 'Pesan minimal 10 karakter.';
+}
+
+if ($captcha === '' || !is_numeric($captcha) || (int)$captcha !== $_SESSION['captcha_sum']) {
+  $errors[] = 'Captcha salah.';
 }
 
 if (!empty($errors)) {
@@ -35,6 +62,7 @@ if (!empty($errors)) {
     'nama' => $nama,
     'email' => $email,
     'pesan' => $pesan,
+    'captcha' => $captcha,
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
@@ -57,7 +85,7 @@ if (mysqli_stmt_execute($stmt)) {
   $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah tersimpan.';
   redirect_ke('index.php#contact');
 } else {
-  $_SSSION['old'] = [
+  $_SESSION['old'] = [
     'nama' => $nama,
     'email' => $email,
     'pesan' => $pesan,
@@ -68,25 +96,4 @@ if (mysqli_stmt_execute($stmt)) {
 
 mysqli_stmt_close($stmt);
 
-$arrContact = [
-  "nama" => $_POST["txtNama"] ?? "",
-  "email" => $_POST["txtEmail"] ?? "",
-  "pesan" => $_POST["txtPesan"] ?? ""
-];
-$_SESSION["contact"] = $arrContact;
-
-$arrBiodata = [
-  "nim" => $_POST["txtNim"] ?? "",
-  "nama" => $_POST["txtNmLengkap"] ?? "",
-  "tempat" => $_POST["txtT4Lhr"] ?? "",
-  "tanggal" => $_POST["txtTglLhr"] ?? "",
-  "hobi" => $_POST["txtHobi"] ?? "",
-  "pasangan" => $_POST["txtPasangan"] ?? "",
-  "pekerjaan" => $_POST["txtKerja"] ?? "",
-  "ortu" => $_POST["txtNmOrtu"] ?? "",
-  "kakak" => $_POST["txtNmKakak"] ?? "",
-  "adik" => $_POST["txtNmAdik"] ?? ""
-];
-$_SESSION["biodata"] = $arrBiodata;
-
-header("location: index.php#about");
+redirect_ke('index.php#contact');

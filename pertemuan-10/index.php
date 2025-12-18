@@ -120,6 +120,11 @@ require_once __DIR__ . '/fungsi.php';
     <section id="contact">
       <h2>Kontak Kami</h2>
 
+      <?php
+      // Simple captcha
+      $_SESSION['captcha_sum'] = 21;
+      ?>
+
       <?php if (tidakKosong($flash_sukses)) : ?>
         <div style="padding: 10px; margin-bottom: 10px; bacground: #d4edda; color: #155724; border-radius: 6px;">
           <?= bersihkan($flash_sukses) ?>
@@ -150,6 +155,11 @@ require_once __DIR__ . '/fungsi.php';
           <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
             required><?= isset($old['pesan']) ? htmlspecialchars($old['pesan']) : '' ?></textarea>
           <small id="charCount">0/200 karakter</small>
+        </label>
+
+        <label for="captcha"><span>Captcha Sederhana: What is 9 + 10 ?</span>
+          <input type="text" id="captcha" name="captcha" placeholder="Masukkan hasil penjumlahan" required
+            value="<?= isset($old['captcha']) ? htmlspecialchars($old['captcha']) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>
