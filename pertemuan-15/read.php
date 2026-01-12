@@ -9,7 +9,7 @@
     die("Query error: " . mysqli_error($conn));
   }
 
-  $sql_biodata = "SELECT * FROM biodatasederhanamahasiswa ORDER BY cid DESC";
+  $sql_biodata = "SELECT * FROM biodatasederhanamahasiswa ORDER BY ccid DESC";
   $q_biodata = mysqli_query($conn, $sql_biodata);
   if (!$q_biodata) {
     die("Query error: " . mysqli_error($conn));
@@ -87,10 +87,10 @@
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="edit_biodata.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete_biodata.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+        <a href="edit_biodata.php?ccid=<?= (int)$row['ccid']; ?>">Edit</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete_biodata.php?ccid=<?= (int)$row['ccid']; ?>">Delete</a>
       </td>
-      <td><?= $row['cid']; ?></td>
+      <td><?= $row['ccid']; ?></td>
       <td><?= htmlspecialchars($row['cnama']); ?></td>
       <td><?= htmlspecialchars($row['ctempat_lahir']); ?></td>
       <td><?= htmlspecialchars($row['ctanggal_lahir']); ?></td>
