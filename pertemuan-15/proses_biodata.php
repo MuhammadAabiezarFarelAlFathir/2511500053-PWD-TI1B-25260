@@ -10,9 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 #ambil dan bersihkan nilai dari form
+$nim = bersihkan($_POST['txtNim'] ?? '');
 $nama  = bersihkan($_POST['txtNmLengkap'] ?? '');
 $tempat_lahir = bersihkan($_POST['txtT4Lhr'] ?? '');
-$tanggal_lahir = bersihkan($_POST['txtTglLhr'] ?? '');
+$tanggal_lahir = !empty($_POST['txtTglLhr']) ? $_POST['txtTglLhr'] : NULL;
 $hobi = bersihkan($_POST['txtHobi'] ?? '');
 $pasangan = bersihkan($_POST['txtPasangan'] ?? '');
 $pekerjaan = bersihkan($_POST['txtKerja'] ?? '');
@@ -24,39 +25,7 @@ $adik = bersihkan($_POST['txtNmAdik'] ?? '');
 $errors = [];
 
 if ($nama === '') {
-  $errors[] = 'Nama wajib diisi.';
-}
-
-if ($tempat_lahir === '') {
-  $errors[] = 'Tempat Lahir wajib diisi.';
-}
-
-if ($tanggal_lahir === '') {
-  $errors[] = 'Tanggal Lahir wajib diisi.';
-}
-
-if ($hobi === '') {
-  $errors[] = 'Hobi wajib diisi.';
-}
-
-if ($pasangan === '') {
-  $errors[] = 'Pasangan wajib diisi.';
-}
-
-if ($pekerjaan === '') {
-  $errors[] = 'Pekerjaan wajib diisi.';
-}
-
-if ($orangtua === '') {
-  $errors[] = 'Nama Orang Tua wajib diisi.';
-}
-
-if ($kakak === '') {
-  $errors[] = 'Nama Kakak wajib diisi.';
-}
-
-if ($adik === '') {
-  $errors[] = 'Nama Adik wajib diisi.';
+  $errors[] = 'Nama Lengkap wajib diisi.';
 }
 
 if (mb_strlen($nama) < 3) {
@@ -69,6 +38,7 @@ simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
 */
 if (!empty($errors)) {
   $_SESSION['old'] = [
+    'nim' => $nim,
     'nama'  => $nama,
     'tempat_lahir' => $tempat_lahir,
     'tanggal_lahir' => $tanggal_lahir,
@@ -85,13 +55,13 @@ if (!empty($errors)) {
 }
 
 #menyiapkan query INSERT dengan prepared statement
-$sql = "INSERT INTO biodatasederhanamahasiswa (cnama, ctempat_lahir, ctanggal_lahir, chobi, cpasangan, cpekerjaan, corangtua, ckakak, cadik) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO biodatasederhanamahasiswa (cnama, ctempat_lahir, ctanggal_lahir, chobi, cpasangan, cpekerjaan, corangtua, ckakak, cadik, ccreated_at) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
   #jika gagal prepare, kirim pesan error ke pengguna (tanpa detail sensitif)
-  $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
+  $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal): ' . mysqli_error($conn);
   redirect_ke('index.php#biodata');
 }
 
@@ -105,6 +75,18 @@ if (mysqli_stmt_execute($stmt)) {
   redirect_ke('index.php#biodata');
 } else {
   #jika gagal eksekusi, beri pesan error
+  $_SESSION['old'] = [
+    'nim' => $nim,
+    'nama'  => $nama,
+    'tempat_lahir' => $tempat_lahir,
+    'tanggal_lahir' => $tanggal_lahir,
+    'hobi' => $hobi,
+    'pasangan' => $pasangan,
+    'pekerjaan' => $pekerjaan,
+    'orangtua' => $orangtua,
+    'kakak' => $kakak,
+    'adik' => $adik,
+  ];
   $_SESSION['flash_error'] = 'Terjadi kesalahan saat menyimpan data: ' . mysqli_error($conn);
   redirect_ke('index.php#biodata');
 }

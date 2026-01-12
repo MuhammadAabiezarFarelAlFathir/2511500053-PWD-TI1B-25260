@@ -100,7 +100,7 @@
       <td><?= htmlspecialchars($row['corangtua']); ?></td>
       <td><?= htmlspecialchars($row['ckakak']); ?></td>
       <td><?= htmlspecialchars($row['cadik']); ?></td>
-      <td><?= formatTanggal(htmlspecialchars($row['created_at'])); ?></td>
+      <td><?= formatTanggal($row['ccreated_at'] ?? ''); ?></td>
     </tr>
   <?php endwhile; ?>
 </table>
