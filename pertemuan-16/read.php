@@ -80,6 +80,7 @@
     <th>Nama Orang Tua</th>
     <th>Nama Pacar</th>
     <th>Nama Mantan</th>
+    <th>Created At</th>
   </tr>
   <?php $j = 1; ?>
   <?php while ($row = mysqli_fetch_assoc($q_biodata)): ?>
@@ -100,6 +101,7 @@
       <td><?= htmlspecialchars($row['CNamaOrangTua']); ?></td>
       <td><?= htmlspecialchars($row['CNamaPacar']); ?></td>
       <td><?= htmlspecialchars($row['CNamaMantan']); ?></td>
+      <td><?= formatTanggal(htmlspecialchars($row['DcreatedAt'])); ?></td>
     </tr>
   <?php endwhile; ?>
 </table>

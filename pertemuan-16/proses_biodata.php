@@ -154,92 +154,97 @@ if ($is_confirmation) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul Halaman</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Ini Header</h1>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        &#9776;
+      </button>
+      <nav>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konfirmasi Biodata Pengunjung</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+    <main>
+      <section id="contact">
+        <h2>Konfirmasi Biodata Pengunjung</h2>
+        <p>Mohon periksa kembali data yang Anda kirimkan sebelum melanjutkan:</p>
 
-<body>
-  <header>
-    <h1>Konfirmasi Biodata Pengunjung</h1>
-  </header>
+        <form action="proses_biodata.php" method="POST">
+          <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; margin-bottom: 20px;">
+            <tr>
+              <td><strong>Kode Pengunjung:</strong></td>
+              <td><?= $ckode_pengunjung_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Nama Pengunjung:</strong></td>
+              <td><?= $cnama_pengunjung_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Alamat Rumah:</strong></td>
+              <td><?= $calamat_rumah_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Tanggal Kunjungan:</strong></td>
+              <td><?= $ctanggal_kunjungan_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Hobi:</strong></td>
+              <td><?= $chobi_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Asal SLTA:</strong></td>
+              <td><?= $casal_slta_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Pekerjaan:</strong></td>
+              <td><?= $cpekerjaan_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Nama Orang Tua:</strong></td>
+              <td><?= $cnama_orangtua_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Nama Pacar:</strong></td>
+              <td><?= $cnama_pacar_html; ?></td>
+            </tr>
+            <tr>
+              <td><strong>Nama Mantan:</strong></td>
+              <td><?= $cnama_mantan_html; ?></td>
+            </tr>
+          </table>
 
-  <main>
-    <section id="confirm-biodata">
-      <h2>Verifikasi Data Anda</h2>
-      <p>Mohon periksa kembali data yang Anda kirimkan sebelum melanjutkan:</p>
+          <!-- Hidden fields to preserve data -->
+          <input type="hidden" name="txtKodePen" value="<?= $ckode_pengunjung_html; ?>">
+          <input type="hidden" name="txtNmPengunjung" value="<?= $cnama_pengunjung_html; ?>">
+          <input type="hidden" name="txtAlRmh" value="<?= $calamat_rumah_html; ?>">
+          <input type="hidden" name="txtTglKunjungan" value="<?= $ctanggal_kunjungan_html; ?>">
+          <input type="hidden" name="txtHobi" value="<?= $chobi_html; ?>">
+          <input type="hidden" name="txtAsalSMA" value="<?= $casal_slta_html; ?>">
+          <input type="hidden" name="txtKerja" value="<?= $cpekerjaan_html; ?>">
+          <input type="hidden" name="txtNmOrtu" value="<?= $cnama_orangtua_html; ?>">
+          <input type="hidden" name="txtNmPacar" value="<?= $cnama_pacar_html; ?>">
+          <input type="hidden" name="txtNmMantan" value="<?= $cnama_mantan_html; ?>">
+          <input type="hidden" name="confirm" value="yes">
 
-      <form action="proses_biodata.php" method="POST" style="margin: 20px 0;">
-        <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; margin-bottom: 20px;">
-          <tr>
-            <td><strong>Kode Pengunjung:</strong></td>
-            <td><?= $ckode_pengunjung_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Nama Pengunjung:</strong></td>
-            <td><?= $cnama_pengunjung_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Alamat Rumah:</strong></td>
-            <td><?= $calamat_rumah_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Tanggal Kunjungan:</strong></td>
-            <td><?= $ctanggal_kunjungan_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Hobi:</strong></td>
-            <td><?= $chobi_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Asal SLTA:</strong></td>
-            <td><?= $casal_slta_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Pekerjaan:</strong></td>
-            <td><?= $cpekerjaan_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Nama Orang Tua:</strong></td>
-            <td><?= $cnama_orangtua_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Nama Pacar:</strong></td>
-            <td><?= $cnama_pacar_html; ?></td>
-          </tr>
-          <tr>
-            <td><strong>Nama Mantan:</strong></td>
-            <td><?= $cnama_mantan_html; ?></td>
-          </tr>
-        </table>
+          <button type="submit">Kirim</button>
+          <button type="reset">Batal</button>
+          <a href="index.php" class="reset">Kembali Ubah</a>
+        </form>
+      </section>
+    </main>
 
-        <!-- Hidden fields to preserve data -->
-        <input type="hidden" name="txtKodePen" value="<?= $ckode_pengunjung_html; ?>">
-        <input type="hidden" name="txtNmPengunjung" value="<?= $cnama_pengunjung_html; ?>">
-        <input type="hidden" name="txtAlRmh" value="<?= $calamat_rumah_html; ?>">
-        <input type="hidden" name="txtTglKunjungan" value="<?= $ctanggal_kunjungan_html; ?>">
-        <input type="hidden" name="txtHobi" value="<?= $chobi_html; ?>">
-        <input type="hidden" name="txtAsalSMA" value="<?= $casal_slta_html; ?>">
-        <input type="hidden" name="txtKerja" value="<?= $cpekerjaan_html; ?>">
-        <input type="hidden" name="txtNmOrtu" value="<?= $cnama_orangtua_html; ?>">
-        <input type="hidden" name="txtNmPacar" value="<?= $cnama_pacar_html; ?>">
-        <input type="hidden" name="txtNmMantan" value="<?= $cnama_mantan_html; ?>">
-        <input type="hidden" name="confirm" value="yes">
-
-        <button type="submit" name="action" value="confirm">Konfirmasi & Simpan</button>
-        <a href="index.php" style="display: inline-block; padding: 10px 20px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px;">Kembali Ubah</a>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
