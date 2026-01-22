@@ -9,7 +9,7 @@
     die("Query error: " . mysqli_error($conn));
   }
 
-  $sql_biodata = "SELECT * FROM biodatapengunjung ORDER BY CKodePengunjung DESC";
+  $sql_biodata = "SELECT * FROM biodatapengunjung ORDER BY CCid DESC";
   $q_biodata = mysqli_query($conn, $sql_biodata);
   if (!$q_biodata) {
     die("Query error: " . mysqli_error($conn));
@@ -86,8 +86,8 @@
     <tr>
       <td><?= $j++ ?></td>
       <td>
-        <a href="edit.php?cid=<?= (int)$row['CKodePengunjung']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['CNamaPengunjung']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['CKodePengunjung']; ?>">Delete</a>
+        <a href="edit_biodata.php?ccid=<?= (int)$row['CCid']; ?>">Edit</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['CNamaPengunjung']); ?>?')" href="proses_delete_biodata.php?ccid=<?= (int)$row['CCid']; ?>">Delete</a>
       </td>
       <td><?= $row['CCid']; ?></td>
       <td><?= htmlspecialchars($row['CKodePengunjung']); ?></td>
