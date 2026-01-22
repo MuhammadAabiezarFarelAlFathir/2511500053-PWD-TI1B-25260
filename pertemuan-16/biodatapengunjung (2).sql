@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 22, 2026 at 03:46 AM
+-- Generation Time: Jan 22, 2026 at 04:40 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -38,8 +38,16 @@ CREATE TABLE `biodatapengunjung` (
   `CPekerjaan` varchar(100) DEFAULT NULL,
   `CNamaOrangTua` varchar(100) DEFAULT NULL,
   `CNamaPacar` varchar(100) DEFAULT NULL,
-  `CNamaMantan` varchar(100) DEFAULT NULL
+  `CNamaMantan` varchar(100) DEFAULT NULL,
+  `DcreatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `biodatapengunjung`
+--
+
+INSERT INTO `biodatapengunjung` (`CCid`, `CKodePengunjung`, `CNamaPengunjung`, `CAlamatRumah`, `CTanggalKunjungan`, `CHobi`, `CAsalSLTA`, `CPekerjaan`, `CNamaOrangTua`, `CNamaPacar`, `CNamaMantan`, `DcreatedAt`) VALUES
+(2, 'test1222', 'testss', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', '2026-01-22 04:37:25');
 
 --
 -- Indexes for dumped tables
@@ -59,7 +67,7 @@ ALTER TABLE `biodatapengunjung`
 -- AUTO_INCREMENT for table `biodatapengunjung`
 --
 ALTER TABLE `biodatapengunjung`
-  MODIFY `CCid` int NOT NULL AUTO_INCREMENT;
+  MODIFY `CCid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
