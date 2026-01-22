@@ -7,5 +7,7 @@
 <li>membuat edit_biodata.php untuk form edit data pengunjung (styling sama dengan edit.php)</li>
 <li>membuat proses_update_biodata.php untuk memproses update data dengan validasi dan sanitation</li>
 <li>membuat proses_delete_biodata.php untuk menghapus data pengunjung</li>
-<li>menambahkan fitur CRUD  untuk tabel biodatapengunjung di read.php</li>
+<li>menambahkan fitur CRUD lengkap untuk tabel biodatapengunjung di read.php</li>
+<li>menambahkan primary key (CCid) sebagai read-only field di edit_biodata.php</li>
+<li>submit dan cancel buttons mengikuti style dari section#contact</li>
 </ol>

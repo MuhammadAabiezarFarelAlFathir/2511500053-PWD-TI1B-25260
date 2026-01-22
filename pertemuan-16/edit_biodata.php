@@ -102,6 +102,10 @@ if (!empty($old)) {
 
           <input type="hidden" name="ccid" value="<?= (int)$ccid; ?>">
 
+          <label for="ccidDisplay"><span>ID Pengunjung:</span>
+            <input type="text" id="ccidDisplay" value="<?= (int)$ccid; ?>" readonly>
+          </label>
+
           <label for="txtKodePen"><span>Kode Pengunjung:</span>
             <input type="text" id="txtKodePen" name="txtKodePen" 
               placeholder="Masukkan Kode Pengunjung" required
